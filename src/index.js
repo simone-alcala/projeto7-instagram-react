@@ -1,14 +1,37 @@
 
-import ReactDOM from 'react-dom';
-import Corpo from './Corpo';
-import Header from './Header';
-import Fundomobile from './Fundomobile';
+import ReactDOM     from 'react-dom';
+import Nav          from './Nav';
+
+//MAIN
+import Stories      from './Stories';
+import Posts        from './Posts';
+
+//SIDEBAR
+import Usuario      from './Usuario';
+import Sugestoes    from './Sugestoes';
+import Links        from './Links';
+import Copyright    from './Copyright';
+
+import Fundomobile  from './Fundomobile';
 
 function App(){
   return(
     <div>
-      <Header />
-      <Corpo />
+      <div class="navbar">
+        <Nav />
+      </div>
+      <div class="corpo">
+        <div class="esquerda">
+          <Stories />
+          <Posts />      
+        </div>
+        <div class='sidebar'>
+          <Usuario />
+          <Sugestoes />
+          <Links />
+          <Copyright />
+        </div>
+    </div>
       <Fundomobile />
     </div>
   );
